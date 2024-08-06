@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Sacramento&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
@@ -9,10 +11,20 @@
 .text-orange{color: #EA512E;}
 .text-black{color: #1B0238;}
 .text-silver{color:#6B6B84;}
-.bg-orange{color: #EA512E;}
+.text-white{color:#ffffff;}
+.bg-light-orange{background:#fdf6ed;}
+.bg-orange{background: #EA512E;}
+.bg-light-yellow{background: #fee9ca;}
+
 .bg-yellow{color: #f5890d;}
 .bg-lightyellow{color: #fee9ca;}
 .mt-20{margin-top: 200px;}
+.mt-10{margin-top: 100px;}
+
+.pt-10{padding-top: 100px;}
+.pb-7{padding-bottom: 70px;}
+pb-10{padding-bottom: 100px;}
+.p-30{padding: 30px;}
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     color: #1b0238;
     font-family: "Catamaran", sans-serif;
@@ -31,6 +43,7 @@
     overflow: hidden;
     z-index: 99;
     margin-top:15px 0px;
+    
  }
  p {
     margin-bottom: 15px;
@@ -42,11 +55,19 @@
     
  }
  
+ .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    
+    color: #1b0238;
+    font-family: "Catamaran", sans-serif;
+    font-weight: bold;
+}
+
 .btn:hover{
     background-color: #f5890d;
+
 }
 /* Universal CSS End */
-/* Header Section Start */
+/* Navbar Section Start */
 .navbar{
     font-size: 16px;
     font-weight: 600;
@@ -80,12 +101,16 @@
     
     
 }
+a.active{
+    color: #EA512E !important;
+
+}
  .navbar .navbar-nav .nav-item .dropdown-menu {
     
     border:none;
     top:70;
     left:0;
-    z-index:99;
+    z-index:9;
     opacity:0;
     width: 280px;
     display: block;
@@ -141,7 +166,7 @@
     transition: all 0.4s ease-in-out;
     box-shadow:0px 0px 15px 0px rgba(0, 0, 0, 0.1);
  }
-/* Header Section End */
+/* Navbar Section End */
 /* Banner Section Start */
 .banner{
     width: 100%;
@@ -166,16 +191,389 @@
     animation:move1 3s linear infinite alternate;
 }   
 .shap2{
-    justify-content:end;
     top: 3.5%;
-     right:10%;
+    left: 50%;
     animation:move2 3s linear infinite alternate;
 }   
+.shap3{
+    top: 70%;
+    left: .7%;
+    z-index: 100;
+    animation:move1 3s linear infinite alternate;
+}
+.shap4{
+    top: 80%;
+    left: 48%;
+    z-index: 100;
+    animation:move3 3s linear infinite alternate;
+
+
+}
+.cloud{
+    z-index: 99;
+    margin-bottom: -85px;
+}
 /* Banner Section End */
+/* Who We are Section Start */
+
+.who span,
+.popular span,
+.core-value span,
+.teacher span,
+.testimonial span{
+    font-weight: 600;
+    font-size: 20px;
+    color: #ea512e;
+    font-family: "Sacramento", cursive;
+    margin-top: 20px;
+    
+}
+.who h3,
+.popular h2{
+    font-size: 45px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+.who ul li{
+    line-height:45px;
+    font-weight: 600;
+    
+}
+.who ul li span
+{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    font-family: "Catamaran", sans-serif;
+    line-height: 30px;
+    background-color: #EA512E;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 5px;
+    transition:all 0.5s;
+    
+
+}
+.who ul li:hover span{
+    background-color: #f5890d;
+    transition:all 0.5s;
+}
+.who-we-are-shape{
+   position: absolute;
+   right:5%;
+   top: 110%;
+   max-width:120px;
+   /* margin-top:-700px; */
+   z-index: 99;
+   animation:move4 3s linear infinite alternate;
+   
+}
+/* Who We are Section End */
+/* Popular Section  Start*/
+.popular{
+    height: auto;
+    background-color: #fdf6ed;
+    padding-top:70px ;
+    padding-bottom: 100px;
+}
+.popular .card:hover img{
+    transform: rotate(2deg) scale(1.2);
+    transition: all 0.3s ease;
+} 
+.card{
+    z-index: 10;
+}
+.card-body .price{
+    position: absolute;
+    top: 10;
+    right:0;
+    font-size: 20px;
+    line-height: 1;
+    background: #ea512e;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 0 0 0 10px;
+    display:inline-block ;
+    margin-top:-17px;
+    transition: all 0.3s linear;
+    
+}
+.card:hover .price{
+    background: #f5890d;
+    transition: all 0.3s linear;
+    
+}
+.card:hover h3{
+    color: #EA512E;
+    transition: all 0.3s linear;
+} 
+.class-list{
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #ea512e;
+}
+.class-list li span{
+    font-family:"Roboto", sans-serif;
+    font-size: 15px;
+    
+}
+ .class-list li{
+    display: inline-block;
+    list-style-type:none;
+    font-weight: 500;
+    padding: 10px;
+}
+.popular-shap1 img{
+    height: auto;
+    max-width: 100%;
+    display: inline-block;
+}
+.class-shape .popular-shap1{
+ position:absolute;
+ left: 0;
+ bottom:-100px;
+ z-index:1;
+
+}
+.class-shape .popular-shap2{
+    position:absolute;
+    right: 0;
+    bottom:-100px;
+    z-index:1;
+   
+   }
 
 
+/* Popular Section End */
+/* Core Value Section Start */
+.core-value{
+    position: relative;
+    margin-bottom:60px;
+}
+.core-value h3{
+    font-size: 45px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.inner-core{
+    position: relative;
+    margin-top: 20px;
+    padding-left:5px;
+    
+}
+ .core-value .number{
+    height: 60px ;
+    width: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    font-family: "Catamaran", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+    margin-top:-5px;
+    color: #1b0238;
+    font-weight: 400;
+    transition:all 0.5s ease;
+}
+.core1{
+     background: #d3f5fe;
+      outline: 1px solid #d3f5fe;
+       outline-offset: 4px;
+}
+.core2{
+    background-color: #fce0ad;
+    outline:1px solid #fce0ad;
+    outline-offset:4px;
+}
+.core3{
+    background-color:#fbc9d5 ;
+    outline:1px solid #fbc9d5;
+    outline-offset:4px; 
+}
+ .inner-core:hover .number{
+    outline: 1px solid #EA512E;
+    outline-offset: 6px;
+    background: #EA512E;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.core-shape1{
+    position: absolute;
+    top:30px;
+    left:20px;
+    z-index:-1;
+}
+.core-shape2{
+    position: absolute;
+   bottom:-30px;
+   left: 20px;
+    z-index:-1;
+}
+.core-shape3{
+    position: absolute;
+    top: 90px;
+    right: 10px;
+    z-index:-1;
+}
+/* Core Value Section End */
+/* Core Teacher Section Start */
+.teacher{
+    background: url("/assets/img/teacher-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 100px;
+    
+
+}
+.teacher-inner{
+    margin-top: -50px;
+    
+}
+.teacher h2{
+    font-size: 45px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.teacher .social-media li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.teacher .social-media li {
+    transform: translateY(30px);
+    transition: all 0.3s ease-in-out 0s;
+    visibility: hidden;
+    display: inline-block;
+    position: relative;
+    top:-80px;
+    bottom: 0px;
+   opacity: 0;
+   background: #EA512E;
+   border-radius: 50%;
+   height:30px;
+   width: 30px;
+   color: #ffffff;
+
+}
+.teacher .social-media {
+    position: absolute;
+    bottom:0px;
+    left:0;
+    right: 0;
+    transition: all 0.5s ease;
+    
+
+    
+}
+.teacher .teacher-image:hover .social-media li{
+    margin-bottom: 0px;
+    transition:all 0.5s ease-in-out;
+    transform: translatey(-50%);
+    visibility: visible;
+    opacity: 1;
+    
+    
+}
+.social-media li:hover{
+    background: #f5890d;
+}
+.teacher .content span{
+    font-family: "Catamaran", sans-serif;
+    font-size: 16px;
+}
+.teacher .content h3{
+    font-size: 30px;
+    padding-top: 20px;
+}
+/* Core Teacher Section End */
+/* Testimonial Section Start */
+.testimonial .card1{
+    transition: all .5s ease-in;
+    position: relative;
+    animation:slide1 10s linear  ;
+}
+.testimonial .card2{
+    transition: all .5s ease-in;
+    position: relative;
+    animation:slide2 10s linear  ;
+}
+.testimonial .card3{
+    transition: all .5s ease-in;
+    position: relative;
+    animation:slide2 10s linear  ;
+    
+}
+
+.testimonial .card .icon{
+   display: inline-block;
+   height: 65px;
+   width: 65px;
+   line-height: 65px;
+   background: #ffffff;
+   color: #ea512e;
+   padding:0;
+   text-align: center;
+   font-size: 30px;
+   margin-left:145px;
+   border-radius: 50%;
+   transition: all 0.5s ease-in;
+
+   
+}
+.testimonial .card:hover .icon 
+{
+    background: #EA512E;
+    color: #ffffff;
+    transition: all 0.5s ease-out;
+    
+
+}
+.card .card-span{
+    display: block;
+     color: #EA512E;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: -5px;
+      font-family: "Catamaran", sans-serif;
+      text-align: center;
+}
+.nav-button{
+    display: flex;
+    justify-content: space-between;
+    visibility: hidden;
+    z-index: 10;
+}
+.testimonial .nav-button button{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    font-weight:bolder;
+    background: #EA512E;
+    border-radius: 50%;
+    line-height: 50px;
+    color: #ffffff;
+    position:relative;
+    top: -180px; 
+
+    
+}
+
+.testimonial .card:hover button{
+    visibility: visible;
+    z-index: 20;
+    
+}
+/* Testimonial Section End */
 @keyframes move1 {
-    0%{right: 50%;}
+    0%{}
     100%{
        left: 3%; 
     }
@@ -183,10 +581,54 @@
     
 }
 @keyframes move2 {
-    0%{left: .7%;}
+    0%{}
     100%{
-       left: 3%; 
+       left: 53%; 
     }
 
     
 }
+@keyframes move3 {
+    0%{}
+    100%{
+       top: 83%; 
+    }
+}
+ @keyframes move4 {
+    0%{}
+    100%{
+        right:3%;
+        }
+    }
+ @keyframes slide1{
+    0%{
+        left:65px;
+    }
+    100%{
+        left: 100%;
+    
+    }
+    
+ }   
+ @keyframes slide2{
+    0%{
+        left:130px;
+    }
+    100%{
+        left: 100%;
+    
+    }
+    
+ }  
+ @keyframes slide3{
+   100%{
+        left:260px;
+    }
+    0%{
+        left:65px;
+    
+    }
+    
+ }    
+        
+    
